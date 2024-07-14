@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template>
+  <t t-name="custom.dashboard1" owl="1">
+    <h2 class="text-center mt-2">Hello World</h2>
+    <div class="p-5">
+      <table class="table">
+        <thead>
+          <tr>
+
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr t-foreach="state.taskList" t-as="task" t-key="task.id">
+            <th scope="row">
+              <t t-esc="task.id"/>
+            </th>
+            <td>
+              <t t-esc="task.name"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </t>
+</template>
